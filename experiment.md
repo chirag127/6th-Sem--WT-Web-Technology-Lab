@@ -7,7 +7,7 @@ website for specific subject.
 
 ## Code
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
