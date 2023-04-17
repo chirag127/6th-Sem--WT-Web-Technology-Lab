@@ -24,3 +24,8 @@ Write an HTML code to demonstrate the usage of inline CSS.
 ```
 
 ### Output
+
+<table border=1><tr><td>
+<img src="https://i.imgur.com/R9eTb86.png"/>
+
+</td></tr></table>

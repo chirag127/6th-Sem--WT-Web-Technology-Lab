@@ -27,5 +27,16 @@ Write an HTML code to demonstrate the usage of internal CSS.
 ```
 
 ### Output
-
+<!--
+<kbd>
 ![Internal CSS](https://i.imgur.com/E93UBg9.png)
+</kbd> -->
+<!--
+<kbd>
+<img src="https://i.imgur.com/E93UBg9.png"/>
+</kbd> -->
+
+<table border=1><tr><td>
+<img src="https://i.imgur.com/E93UBg9.png"/>
+
+</td></tr></table>
