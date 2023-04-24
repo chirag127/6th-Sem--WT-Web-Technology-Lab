@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <script>
+      let username = prompt("Please enter your username", "chirag");
+      let text;
+      if (username == null || username == "") {
+        text = "User cancelled the prompt.";
+      } else {
+        text = "Hello " + username + "! How are you today?";
+      }
+      document.write('<h1  style="text-align: center;">' + text + "</h1>");
+    </script>
+  </head>
+</html>

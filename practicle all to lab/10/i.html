@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script>
+      function valid() {
+        var fname = document.forms.RegForm.fname.value;
+        var lname = document.forms.RegForm.lname.value;
+        var mobile = document.forms.RegForm.mobile.value;
+        console.log("valid");
+
+        if (fname == "") {
+          window.alert("Please enter your first name properly.");
+
+          return false;
+        }
+
+        if (lname == "") {
+          window.alert("Please enter your last name properly.");
+
+          return false;
+        }
+
+        if (mobile == "") {
+          alert("Please enter valid phone number.");
+
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1 style="text-align: center">REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return valid()" method="post">
+      <p>
+        Fname:
+        <input type="text" size="65" name="fname" />
+      </p>
+      <br />
+      <p>
+        Lname:
+        <input type="text" size="65" name="lname" />
+      </p>
+      <br />
+      <p>
+        Mobile:
+        <input type="text" size="65" name="mobile" />
+      </p>
+      <br />
+
+      <p>
+        <input type="submit" value="send" name="Submit" />
+        <input type="reset" value="Reset" name="Reset" />
+      </p>
+    </form>
+  </body>
+</html>
