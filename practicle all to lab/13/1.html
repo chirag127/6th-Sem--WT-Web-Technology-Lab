@@ -42,7 +42,7 @@
 
         button {
             display: inline-block;
-            width: 35%;
+            width: 50%;
             margin: 5px;
             padding: 10px;
             font-size: 18px;
@@ -86,7 +86,7 @@
         <div class="row">
             <div class="col"><button onclick="clearDisplay()" class="clear">C</button></div>
             <div class="col"><button onclick="deleteCharacter()">D</button></div>
-            <div class="col"><button onclick="insertCharacter('^')">^</button></div>
+            <div class="col"><button onclick="insertCharacter('**')">**</button></div>
             <div class="col"><button onclick="insertCharacter('/')">/</button></div>
         </div>
         <div class="row">
@@ -112,6 +112,12 @@
             <div class="col"><button onclick="insertCharacter('.')">.</button></div>
             <div class="col"><button onclick="insertCharacter('(')">(</button></div>
             <div class="col"><button onclick="insertCharacter(')')">)</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button onclick="insertCharacter('Math.sin(')">sin</button></div>
+            <div class="col"><button onclick="insertCharacter('Math.cos(')">cos</button></div>
+            <div class="col"><button onclick="insertCharacter('Math.tan(')">tan</button></div>
+            <div class="col"><button onclick="insertCharacter('Math.sqrt(')">sqrt</button></div>
         </div>
         <div class="row">
             <div class="col"><button onclick="calculate()" class="equal">=</button></div>
