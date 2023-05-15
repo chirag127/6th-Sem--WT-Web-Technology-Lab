@@ -1,0 +1,19 @@
+note {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  to {
+    font-weight: bold;
+  }
+
+  from {
+    font-style: italic;
+  }
+
+  heading {
+    text-decoration: underline;
+  }

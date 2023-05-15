@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scientific Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            text-align: right;
+        }
+
+        button {
+            display: inline-block;
+            width: 35%;
+            margin: 5px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            width: 25%;
+        }
+
+        .clear {
+            background-color: #ff6666;
+        }
+
+        .equal {
+            background-color: #66ccff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Scientific Calculator</h1>
+        <input type="text" id="display" disabled>
+        <div class="row">
+            <div class="col"><button onclick="clearDisplay()" class="clear">C</button></div>
+            <div class="col"><button onclick="deleteCharacter()">D</button></div>
+            <div class="col"><button onclick="insertCharacter('^')">^</button></div>
+            <div class="col"><button onclick="insertCharacter('/')">/</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button onclick="insertCharacter('7')">7</button></div>
+            <div class="col"><button onclick="insertCharacter('8')">8</button></div>
+            <div class="col"><button onclick="insertCharacter('9')">9</button></div>
+            <div class="col"><button onclick="insertCharacter('*')">*</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button onclick="insertCharacter('4')">4</button></div>
+            <div class="col"><button onclick="insertCharacter('5')">5</button></div>
+            <div class="col"><button onclick="insertCharacter('6')">6</button></div>
+            <div class="col"><button onclick="insertCharacter('-')">-</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button onclick="insertCharacter('1')">1</button></div>
+            <div class="col"><button onclick="insertCharacter('2')">2</button></div>
+            <div class="col"><button onclick="insertCharacter('3')">3</button></div>
+            <div class="col"><button onclick="insertCharacter('+')">+</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button onclick="insertCharacter('0')">0</button></div>
+            <div class="col"><button onclick="insertCharacter('.')">.</button></div>
+            <div class="col"><button onclick="insertCharacter('(')">(</button></div>
+            <div class="col"><button onclick="insertCharacter(')')">)</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button onclick="calculate()" class="equal">=</button></div>
+        </div>
+    </div>
+    <script>
+        function insertCharacter(char) {
+            document.getElementById("display").value += char;
+        }
+
+        function deleteCharacter() {
+            var display = document.getElementById("display");
+            display.value = display.value.slice(0, -1);
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function calculate() {
+            var display = document.getElementById("display");
+            var result = eval(display.value);
+            display.value = result;
+        }
+    </script>
+</body>
+
+</html>
