@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Information</title>
+    <script>
+        function displayBrowserInfo() {
+            var browserName = navigator.appName;
+            var browserVersion = navigator.appVersion;
+            var browserCodeName = navigator.appCodeName;
+            Element = document.getElementById("browserInfo");
+            Element.innerHTML = "<p>Browser Name: " + browserName + "</p>" + "<p>Browser Version: " + browserVersion + "</p>" + "<p>Browser Code Name: " + browserCodeName + "</p>";
+        }
+    </script>
+</head>
+
+<body onload="displayBrowserInfo()">
+    <h1>Browser Information</h1>
+    <div id="browserInfo"></div>
+</body>
+
+</html>
